@@ -1,0 +1,14 @@
+{
+  "id": "bookmark",
+  "name": "Bookmark",
+  "description": "Bookmark",
+  "keywords": [
+    "bookmark",
+    "favorite",
+    "remember"
+  ],
+  "version": "0.1",
+  "humhub": {
+    "minVersion": "1.2.3"
+  }
+}
