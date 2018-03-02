@@ -38,8 +38,8 @@ class ViewBookmarkStream extends \humhub\libs\BasePermission
     public function __construct($config = array())
     {
         parent::__construct($config);
-        $this->title = \Yii::t('BookmarkModule.permissions', 'View your bookmark stream');
-        $this->description = \Yii::t('BookmarkModule.permissions', 'Allows access to your bookmark stream');
+        $this->title = Yii::t('BookmarkModule.permissions', 'View your bookmark stream');
+        $this->description = Yii::t('BookmarkModule.permissions', 'Allow other users to see your bookmarks');
     }
 
     /**
