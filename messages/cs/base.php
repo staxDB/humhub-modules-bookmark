@@ -18,8 +18,8 @@
  */
 return [
     'Access denied!' => '',
-    'Adds a bookmark link for content.' => 'Fügt ein Lesezeichen-Link für Inhalte hinzu.',
-    'Bookmark' => 'Lesezeichen',
-    'Bookmarks' => 'Lesezeichen',
-    'Shows up your bookmarked content.' => 'Zeigt deine mit Lesezeichen versehenen Inhalte an.',
+    'Adds a bookmark link for content.' => '',
+    'Bookmark' => '',
+    'Bookmarks' => '',
+    'Shows up your bookmarked content.' => '',
 ];
