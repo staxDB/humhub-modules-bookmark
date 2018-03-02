@@ -122,36 +122,11 @@ class Events extends \yii\base\Object
     public static function onMemberAdded ($event)
     {
 //        TODO: add functionality
-        // Add member to open announcements
-//        $announcements = Announcement::find()->contentContainer($event->space)->all();
-//
-//        if (isset($announcements) && $announcements !== null) {
-//            foreach ($announcements as $announcement) {
-//                if ($announcement->closed) {
-//                    continue;
-//                }
-//                $announcement->setConfirmation($event->user);
-//            }
-//        }
     }
 
     public static function onMemberRemoved ($event)
     {
 //        TODO: add functionality
-//        $announcements = Announcement::find()->contentContainer($event->space)->all();
-//
-//        if (isset($announcements) && $announcements !== null) {
-//            foreach ($announcements as $announcement) {
-//                $announcementUser = $announcement->findAnnouncementUser($event->user);
-//                if ($announcement->closed) { // Skip closed announcements, because we want user to be part of statistics
-//                    $announcementUser->followContent(false); // But he shouldn't get any notifications about the content
-//                    continue;
-//                }
-//                if (isset($announcementUser) && $announcementUser !== null) {
-//                    $announcement->unlink('confirmations', $announcementUser, true);
-//                }
-//            }
-//        }
     }
 
 }
