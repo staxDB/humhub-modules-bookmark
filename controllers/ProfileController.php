@@ -2,14 +2,13 @@
 
 namespace humhub\modules\bookmark\controllers;
 
-use humhub\modules\bookmark\components\ProfileBookmarkStream;
-use humhub\modules\bookmark\permissions\ViewBookmarkStream;
 use Yii;
 use yii\web\HttpException;
 use humhub\modules\content\components\ContentContainerController;
 use humhub\modules\bookmark\models\Bookmark;
-use humhub\modules\bookmark\components\BookmarkStream;
 use humhub\modules\stream\actions\Stream;
+use humhub\modules\bookmark\components\ProfileBookmarkStream;
+use humhub\modules\bookmark\permissions\ViewBookmarkStream;
 
 
 /**
