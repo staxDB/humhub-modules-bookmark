@@ -10,5 +10,11 @@
   "version": "0.1",
   "humhub": {
     "minVersion": "1.2.3"
-  }
+  },
+  "screenshots": [
+    "assets/screen1.png",
+    "assets/screen2.png",
+    "assets/screen3.png",
+    "assets/screen4.png"
+  ]
 }

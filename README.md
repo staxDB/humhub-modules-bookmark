@@ -1,29 +1,15 @@
 ## Description
 
-Simple module to bookmark posts.
-Also allows your friend to see your personal bookmarks (if module is activated for user profile).
+Simple module to bookmark posts, which will be shown on an individual dashboard called `bookmarks` .
+
+PERSONALIZE
+Build your own dashboard from the (for yourself) most important posts.
+
+SHARE   
+Let your friend see your bookmarked posts.
+
+
+> For installation instructions take a look at the docs-folder.
 
 __Module website:__ <https://github.com/staxDB/humhub-modules-bookmark>  
 __Author:__ davidborn (staxDB)
-
-## Installation
-
-- Download the [Latest Release](https://github.com/staxDB/humhub-modules-bookmark/releases) and upload contents to **/protected/modules/bookmark**
-- or simply clone this repo by `git clone https://github.com/staxDB/humhub-modules-bookmark.git bookmark` into folder **/protected/modules**
-
-then go to `Administration -> Modules` and **Enable** the **Bookmark** module.
-
-**_Note:_** You should also enable the module on each User (settings) you wan't to share the personal bookmarks between users.
-
-## Changelog
-
-v 0.0.1:
-<https://github.com/staxDB/humhub-modules-bookmark/commits/master>
-
-## Bugtracker
-
-<https://github.com/staxDB/humhub-modules-bookmark/issues>
-
-## ToDo
-- suggest posts that you may like as bookmarks
-- receive update information about changes to bookmarked posts
