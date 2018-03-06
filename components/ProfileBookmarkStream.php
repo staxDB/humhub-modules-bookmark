@@ -8,15 +8,12 @@
 
 namespace humhub\modules\bookmark\components;
 
-use humhub\modules\stream\actions\ContentContainerStream;
 use Yii;
-use yii\db\Query;
 use humhub\modules\stream\actions\Stream;
 use humhub\modules\user\models\User;
 use humhub\modules\space\models\Space;
 use humhub\modules\space\models\Membership;
 use humhub\modules\content\models\Content;
-use humhub\modules\bookmark\Module;
 
 /**
  * BookmarkStreamAction
