@@ -34,7 +34,7 @@ class Events extends \yii\base\Object
         $event->sender->addItem(array(
             'label' => Yii::t('BookmarkModule.base', 'Bookmarks'),
             'id' => 'bookmark',
-            'icon' => '<i class="fa fa-star"></i>',
+            'icon' => '<i class="fa fa-bookmark"></i>',
             'url' => Url::toRoute('/bookmark/index'),
             'sortOrder' => 100,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'bookmark'),
@@ -49,7 +49,7 @@ class Events extends \yii\base\Object
                 $event->sender->addItem([
                     'label' => Yii::t('BookmarkModule.base', 'Bookmarks'),
                     'url' => $user->createUrl('/bookmark/profile/show'),
-                    'icon' => '<i class="fa fa-star"></i>',
+                    'icon' => '<i class="fa fa-bookmark"></i>',
                     'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'bookmark'),
                 ]);
             }
@@ -57,9 +57,7 @@ class Events extends \yii\base\Object
     }
 
     /**
-     * On User delete, also delete all comments
-     *
-     * @param type $event
+     * On User delete, also delete all bookmarks
      */
     public static function onUserDelete($event)
     {
@@ -70,6 +68,9 @@ class Events extends \yii\base\Object
         return true;
     }
 
+    /**
+     * On content delete, also delete all bookmarks
+     */
     public static function onActiveRecordDelete($event)
     {
         $record = $event->sender;
@@ -82,8 +83,6 @@ class Events extends \yii\base\Object
 
     /**
      * Callback to validate module database records.
-     *
-     * @param Event $event
      */
     public static function onIntegrityCheck($event)
     {
@@ -96,7 +95,7 @@ class Events extends \yii\base\Object
                     $bookmark->delete();
                 }
             }
-            // User exists
+            // User doesn't exists
             if ($bookmark->user === null) {
                 if ($integrityController->showFix("Deleting bookmark id " . $bookmark->id . " without existing user!")) {
                     $bookmark->delete();

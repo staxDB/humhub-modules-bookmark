@@ -18,7 +18,6 @@ use humhub\modules\bookmark\notifications\NewBookmark;
  *
  * The followings are the available columns in table 'bookmark':
  * @property integer $id
- * @property integer $target_user_id
  * @property string $object_model
  * @property integer $object_id
  * @property string $created_at
@@ -65,7 +64,7 @@ class Bookmark extends ContentAddonActiveRecord
     {
         return array(
             array(['object_model', 'object_id'], 'required'),
-            array(['id', 'object_id', 'target_user_id'], 'integer'),
+            array(['id', 'object_id'], 'integer'),
         );
     }
 

@@ -12,6 +12,8 @@ use Yii;
 use humhub\modules\notification\components\NotificationCategory;
 use humhub\modules\notification\targets\BaseTarget;
 use humhub\modules\notification\targets\MailTarget;
+use humhub\modules\notification\targets\WebTarget;
+use humhub\modules\notification\targets\MobileTarget;
 
 /**
  * BookmarkNotificationCategory
@@ -33,6 +35,10 @@ class BookmarkNotificationCategory extends NotificationCategory
     {
         if ($target instanceof MailTarget) {
             return false;
+        } elseif ($target instanceof WebTarget) {
+            return true;
+        } elseif ($target instanceof MobileTarget) {
+            return true;
         }
 
         return parent::getDefaultSetting($target);
