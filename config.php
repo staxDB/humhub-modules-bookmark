@@ -21,7 +21,6 @@ return [
         ['class' => IntegrityController::className(), 'event' => IntegrityController::EVENT_ON_RUN, 'callback' => ['humhub\modules\bookmark\Events', 'onIntegrityCheck']],
         ['class' => WallEntryLinks::className(), 'event' => WallEntryLinks::EVENT_INIT, 'callback' => ['humhub\modules\bookmark\Events', 'onWallEntryLinksInit']],
         ['class' => TopMenu::className(), 'event' => TopMenu::EVENT_INIT, 'callback' => ['\humhub\modules\bookmark\Events', 'onTopMenuInit']],
-
     ],
 ];
 ?>

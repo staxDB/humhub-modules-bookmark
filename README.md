@@ -9,6 +9,10 @@ Build your own dashboard from the (for yourself) most important posts.
 Let your friend see your bookmarked posts.
 
 
+## Works with
+- Humhub version 1.2.3
+- Humhub version 1.2.4
+
 > For installation instructions take a look at the docs-folder.
 
 __Module website:__ <https://github.com/staxDB/humhub-modules-bookmark>  
