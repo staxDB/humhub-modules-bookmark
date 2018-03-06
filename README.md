@@ -2,10 +2,10 @@
 
 Simple module to bookmark posts, which will be shown on an individual dashboard called `bookmarks` .
 
-PERSONALIZE
+**PERSONALIZE**   
 Build your own dashboard from the (for yourself) most important posts.
 
-SHARE   
+**SHARE**   
 Let your friend see your bookmarked posts.
 
 
