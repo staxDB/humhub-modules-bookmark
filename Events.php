@@ -114,18 +114,4 @@ class Events extends \yii\base\Object
         $event->sender->addWidget(widgets\BookmarkLink::className(), array('object' => $event->sender->object), array('sortOrder' => 10));
     }
 
-
-    /**
-     * @param $event
-     */
-    public static function onMemberAdded ($event)
-    {
-//        TODO: add functionality
-    }
-
-    public static function onMemberRemoved ($event)
-    {
-//        TODO: add functionality
-    }
-
 }

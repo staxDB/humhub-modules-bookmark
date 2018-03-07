@@ -100,12 +100,6 @@ class Bookmark extends ContentAddonActiveRecord
             NewBookmark::instance()->from(Yii::$app->user->getIdentity())->about($this)->send($target);
         }
 
-        // turn on notifications for bookmarked content
-        $content = $this->getSource();
-        if ($content !== null) {
-            $content->follow($this->created_by, true);
-        }
-
         return parent::afterSave($insert, $changedAttributes);
     }
 
@@ -116,12 +110,6 @@ class Bookmark extends ContentAddonActiveRecord
     public function beforeDelete()
     {
         Yii::$app->cache->delete('bookmarks_' . $this->object_model . "_" . $this->object_id);
-
-        // turn off notifications for bookmarked content
-        $content = $this->getSource();
-        if ($content !== null) {
-            $content->follow($this->created_by, false);
-        }
 
         return parent::beforeDelete();
     }

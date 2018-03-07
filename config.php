@@ -15,8 +15,6 @@ return [
     'events' => [
         ['class' => ProfileMenu::className(), 'event' => ProfileMenu::EVENT_INIT, 'callback' => ['humhub\modules\bookmark\Events', 'onProfileMenuInit']],
         ['class' => User::className(), 'event' => User::EVENT_BEFORE_DELETE, 'callback' => ['humhub\modules\bookmark\Events', 'onUserDelete']],
-        ['class' => Membership::className(), 'event' => Membership::EVENT_MEMBER_ADDED, 'callback' => ['humhub\modules\announcements\Events', 'onMemberAdded']],
-        ['class' => Membership::className(), 'event' => Membership::EVENT_MEMBER_REMOVED, 'callback' => ['humhub\modules\announcements\Events', 'onMemberRemoved']],
         ['class' => ActiveRecord::className(), 'event' => ActiveRecord::EVENT_BEFORE_DELETE, 'callback' => ['humhub\modules\bookmark\Events', 'onActiveRecordDelete']],
         ['class' => IntegrityController::className(), 'event' => IntegrityController::EVENT_ON_RUN, 'callback' => ['humhub\modules\bookmark\Events', 'onIntegrityCheck']],
         ['class' => WallEntryLinks::className(), 'event' => WallEntryLinks::EVENT_INIT, 'callback' => ['humhub\modules\bookmark\Events', 'onWallEntryLinksInit']],
