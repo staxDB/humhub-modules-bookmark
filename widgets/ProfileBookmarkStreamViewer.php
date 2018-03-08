@@ -43,7 +43,7 @@ class ProfileBookmarkStreamViewer extends BaseStreamViewer
                 if (Yii::$app->user->id === $this->contentContainer->id) {
                     $this->messageStreamEmpty = Yii::t('BookmarkModule.widgets_views_stream', '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!');
                 } else {
-                    $this->messageStreamEmpty = Yii::t('BookmarkModule.widgets_views_stream', '<b>This bookmark stream is still empty</b><br>Be the first and post something...');
+                    $this->messageStreamEmpty = Yii::t('BookmarkModule.widgets_views_stream', '<b>This bookmark stream is still empty</b>');
                 }
             } else {
                 $this->messageStreamEmpty = Yii::t('BookmarkModule.widgets_views_stream', '<b>This bookmark stream is still empty!</b>');

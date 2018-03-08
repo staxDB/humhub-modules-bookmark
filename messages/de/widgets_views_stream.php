@@ -18,6 +18,5 @@
  */
 return [
     '<b>This bookmark stream is still empty!</b>' => '<b>Es gibt zur Zeit keine Lesezeichen</b>',
-    '<b>This bookmark stream is still empty</b><br>Be the first and post something...' => '<b>Es gibt zur Zeit keine Lesezeichen</b><br>Sei der Erste der ein Lesezeichen setzt...',
     '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '<b>Du hast dir noch keine Lesezeichen gesetzt</b><br>Suche nach Inhalten, die dich interessieren und setze ein Lesezeichen!',
 ];
