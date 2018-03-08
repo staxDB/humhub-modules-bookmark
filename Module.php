@@ -2,12 +2,13 @@
 
 namespace humhub\modules\bookmark;
 
-use humhub\modules\bookmark\models\Bookmark;
+
 use Yii;
+use yii\helpers\Url;
 use humhub\modules\user\models\User;
+use humhub\modules\bookmark\models\Bookmark;
 use humhub\modules\content\components\ContentContainerModule;
 use humhub\modules\content\components\ContentContainerActiveRecord;
-use humhub\components\Module as old;
 
 /**
  * This module provides bookmark support for Content and Content Addons
@@ -102,6 +103,13 @@ class Module extends ContentContainerModule
         }
 
         return [];
+    }
+
+    public function getConfigUrl()
+    {
+        return Url::to([
+            '/bookmark/config'
+        ]);
     }
 
 }

@@ -19,13 +19,15 @@ humhub\modules\bookmark\assets\BookmarkAsset::register($this);
         </a>
     <?php endif; ?>
 
-    <?php if (count($bookmarks) > 0) { ?>
-        <!-- Create link to show all users, who bookmarked this -->
-        <a href="<?php echo $userListUrl; ?>" data-target="#globalModal">
-            <span class="bookmarkCount tt" data-placement="top" data-toggle="tooltip" title="<?= $title ?>">(<?= count($bookmarks) ?>)</span>
-        </a>
-    <?php } else { ?>
-        <span class="bookmarkCount"></span>
-    <?php } ?>
+    <?php if ($settings->seeBookmarkCount) : ?>
+        <?php if (count($bookmarks) > 0) { ?>
+            <!-- Create link to show all users, who bookmarked this -->
+            <a href="<?php echo $userListUrl; ?>" data-target="#globalModal">
+                <span class="bookmarkCount tt" data-placement="top" data-toggle="tooltip" title="<?= $title ?>">(<?= count($bookmarks) ?>)</span>
+            </a>
+        <?php } else { ?>
+            <span class="bookmarkCount"></span>
+        <?php } ?>
+    <?php endif; ?>
 
 </span>

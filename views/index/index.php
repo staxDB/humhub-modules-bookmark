@@ -5,7 +5,12 @@
 
 ?>
 
+<?php if ($settings->showFullWidth) : ?>
 <div class="container-fluid">
+<?php else: ?>
+<div class="container">
+<?php endif; ?>
+
     <div class="row">
         <div class="col-md-8 layout-content-container">
             <?= \humhub\modules\bookmark\widgets\BookmarkContent::widget([

@@ -10,6 +10,7 @@ namespace humhub\modules\bookmark\controllers;
 
 use humhub\components\Controller;
 use humhub\modules\bookmark\components\BookmarkStream;
+use humhub\modules\bookmark\models\forms\ConfigForm;
 use Yii;
 
 class IndexController extends Controller
@@ -54,8 +55,11 @@ class IndexController extends Controller
      */
     public function actionIndex()
     {
+        $settings = ConfigForm::instantiate();
+
         return $this->render('index', [
-            'contentContainer' => Yii::$app->user->getIdentity()
+            'contentContainer' => Yii::$app->user->getIdentity(),
+            'settings' => $settings
         ]);
     }
 
