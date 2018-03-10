@@ -18,6 +18,6 @@
  */
 return [
     '<b>This bookmark stream is still empty!</b>' => '',
-    '<b>This bookmark stream is still empty</b><br>Be the first and post something...' => '',
+    '<b>This bookmark stream is still empty</b>' => '',
     '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '',
 ];

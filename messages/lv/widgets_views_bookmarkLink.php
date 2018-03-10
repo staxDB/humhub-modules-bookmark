@@ -18,8 +18,8 @@
  */
 return [
     ' bookmarked this.' => '',
-    '&checkmark; Bookmarked' => '',
     'Bookmark' => '',
+    'Remove bookmark' => '',
     'You' => '',
     'You bookmarked this.' => '',
     'and {count} more bookmarked this.' => '',

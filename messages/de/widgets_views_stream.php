@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<b>This bookmark stream is still empty!</b>' => '<b>Es gibt zur Zeit keine Lesezeichen</b>',
+    '<b>This bookmark stream is still empty</b>' => '<b>Es gibt zur Zeit keine Lesezeichen</b>',
+    '<b>This bookmark stream is still empty!</b>' => '<b>Es gibt zur Zeit keine Lesezeichen!</b>',
     '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '<b>Du hast dir noch keine Lesezeichen gesetzt</b><br>Suche nach Inhalten, die dich interessieren und setze ein Lesezeichen!',
 ];

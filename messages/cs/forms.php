@@ -22,4 +22,5 @@ return [
     'Here you can change the view settings for bookmarks.' => '',
     'Show Bookmark-Count in braces.' => '',
     'Show global Bookmark-View in full width.' => '',
+    'Show pinned content first.' => '',
 ];

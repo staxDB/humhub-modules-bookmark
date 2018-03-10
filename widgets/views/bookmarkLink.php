@@ -15,7 +15,7 @@ humhub\modules\bookmark\assets\BookmarkAsset::register($this);
             <?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Bookmark') ?>
         </a>
         <a href="#" data-action-click="bookmark.toggleBookmark" data-action-url="<?= $unbookmarkUrl ?>" class="unbookmark bookmarkAnchor" style="<?= ($currentUserBookmarked) ? '' : 'display:none'?>">
-            <?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', '&checkmark; Bookmarked') ?>
+            <?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Remove bookmark') ?>
         </a>
     <?php endif; ?>
 

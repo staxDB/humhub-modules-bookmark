@@ -13,6 +13,7 @@ use humhub\modules\stream\actions\Stream;
 use humhub\modules\user\models\User;
 use humhub\modules\space\models\Space;
 use humhub\modules\space\models\Membership;
+use humhub\modules\bookmark\models\forms\DefaultSettings;
 
 /**
  * BookmarkStreamAction
@@ -31,11 +32,38 @@ class BookmarkStream extends Stream
     {
         parent::init();
 
+        $user = Yii::$app->user;
+
+        $defaultSettings = new DefaultSettings(['contentContainer' => $user->getIdentity()]);
         $friendshipEnabled = Yii::$app->getModule('friendship')->getIsEnabled();
 
         $this->activeQuery->leftJoin('bookmark', 'content.object_id=bookmark.object_id and content.object_model=bookmark.object_model');
         $this->activeQuery->orWhere(['content.stream_channel' => null]);    // also show hidden contents
-        $this->activeQuery->andWhere(['bookmark.created_by' => Yii::$app->user->id]);
+        $this->activeQuery->andWhere(['bookmark.created_by' => $user->id]);
+
+
+
+        if ($defaultSettings->pinned_first) {
+            // Add all pinned contents to initial request
+            if ($this->isInitialRequest()) {
+                // Get number of pinned contents
+                $pinnedQuery = clone $this->activeQuery;
+                $pinnedQuery->andWhere(['content.pinned' => 1]);
+                $pinnedCount = $pinnedQuery->count();
+
+                // Increase query result limit to ensure there are also not pinned entries
+                $this->activeQuery->limit += $pinnedCount;
+
+                // Modify order - pinned content first
+                $oldOrder = $this->activeQuery->orderBy;
+                $this->activeQuery->orderBy("");
+                $this->activeQuery->addOrderBy('content.pinned DESC');
+                $this->activeQuery->addOrderBy($oldOrder);
+            } else {
+                // No pinned content in further queries
+                $this->activeQuery->andWhere("content.pinned = 0");
+            }
+        }
 
         /**
          * Begin visibility checks regarding the content container

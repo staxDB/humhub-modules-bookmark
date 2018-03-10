@@ -10,11 +10,14 @@
 
 use yii\widgets\ActiveForm;
 use \yii\helpers\Html;
+use humhub\modules\bookmark\widgets\GlobalConfigMenu;
 ?>
 
 <div class="panel panel-default">
 
     <div class="panel-heading"><?= Yii::t('BookmarkModule.forms', '<strong>Bookmark</strong> module configuration'); ?></div>
+
+    <?= GlobalConfigMenu::widget() ?>
 
     <div class="panel-body">
         <?php $form = ActiveForm::begin(); ?>

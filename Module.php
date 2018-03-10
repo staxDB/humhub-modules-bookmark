@@ -99,6 +99,7 @@ class Module extends ContentContainerModule
         if ($contentContainer instanceof User) {
             return [
                 new permissions\ViewBookmarkStream(),
+                new permissions\ManageBookmark(),
             ];
         }
 
@@ -110,6 +111,11 @@ class Module extends ContentContainerModule
         return Url::to([
             '/bookmark/config'
         ]);
+    }
+
+    public function getContentContainerConfigUrl(ContentContainerActiveRecord $container)
+    {
+        return $container->createUrl('/bookmark/container-config');
     }
 
 }

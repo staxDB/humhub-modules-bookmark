@@ -14,6 +14,7 @@ use humhub\modules\user\models\User;
 use humhub\modules\space\models\Space;
 use humhub\modules\space\models\Membership;
 use humhub\modules\content\models\Content;
+use humhub\modules\bookmark\models\forms\DefaultSettings;
 
 /**
  * BookmarkStreamAction
@@ -37,6 +38,7 @@ class ProfileBookmarkStream extends Stream
     {
         parent::init();
 
+        $defaultSettings = new DefaultSettings(['contentContainer' => $this->contentContainer]);
         $friendshipEnabled = Yii::$app->getModule('friendship')->getIsEnabled();
 
         $this->activeQuery->leftJoin('bookmark', 'content.object_id=bookmark.object_id and content.object_model=bookmark.object_model');
@@ -52,24 +54,26 @@ class ProfileBookmarkStream extends Stream
             }
         }
 
-        // Add all pinned contents to initial request
-        if ($this->isInitialRequest()) {
-            // Get number of pinned contents
-            $pinnedQuery = clone $this->activeQuery;
-            $pinnedQuery->andWhere(['content.pinned' => 1]);
-            $pinnedCount = $pinnedQuery->count();
+        if ($defaultSettings->pinned_first) {
+            // Add all pinned contents to initial request
+            if ($this->isInitialRequest()) {
+                // Get number of pinned contents
+                $pinnedQuery = clone $this->activeQuery;
+                $pinnedQuery->andWhere(['content.pinned' => 1]);
+                $pinnedCount = $pinnedQuery->count();
 
-            // Increase query result limit to ensure there are also not pinned entries
-            $this->activeQuery->limit += $pinnedCount;
+                // Increase query result limit to ensure there are also not pinned entries
+                $this->activeQuery->limit += $pinnedCount;
 
-            // Modify order - pinned content first
-            $oldOrder = $this->activeQuery->orderBy;
-            $this->activeQuery->orderBy("");
-            $this->activeQuery->addOrderBy('content.pinned DESC');
-            $this->activeQuery->addOrderBy($oldOrder);
-        } else {
-            // No pinned content in further queries
-            $this->activeQuery->andWhere("content.pinned = 0");
+                // Modify order - pinned content first
+                $oldOrder = $this->activeQuery->orderBy;
+                $this->activeQuery->orderBy("");
+                $this->activeQuery->addOrderBy('content.pinned DESC');
+                $this->activeQuery->addOrderBy($oldOrder);
+            } else {
+                // No pinned content in further queries
+                $this->activeQuery->andWhere("content.pinned = 0");
+            }
         }
 
         /**

@@ -17,8 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '{displayNames} bookmarked your {contentTitle}.' => '',
-    '{displayName} bookmarked your {contentTitle}.' => '',
+    '{displayNames} bookmarked your {contentTitle}.' => '{displayNames} haben Lesezeichen für deinen {contentTitle} gesetzt.',
+    '{displayName} bookmarked your {contentTitle}.' => '{displayName} hat ein Lesezeichen für deinen {contentTitle} gesetzt.',
     '{displayNames} bookmarked {contentTitle}.' => '{displayNames} haben Lesezeichen für {contentTitle} gesetzt.',
     '{displayName} bookmarked {contentTitle}.' => '{displayName} hat ein Lesezeichen für {contentTitle} gesetzt.',
 ];

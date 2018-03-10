@@ -10,7 +10,6 @@ use humhub\modules\stream\actions\Stream;
 use humhub\modules\bookmark\components\ProfileBookmarkStream;
 use humhub\modules\bookmark\permissions\ViewBookmarkStream;
 
-
 /**
  */
 class ProfileController extends ContentContainerController
@@ -35,6 +34,7 @@ class ProfileController extends ContentContainerController
         if (!$this->contentContainer->permissionManager->can(new ViewBookmarkStream())) {
             throw new HttpException(403, 'Forbidden');
         }
+
         return $this->render('show', array(
             'contentContainer' => $this->contentContainer
         ));

@@ -18,5 +18,7 @@
  */
 return [
     'Allow other users to see your bookmarks' => '',
+    'Can manage Bookmark entries.' => '',
+    'Manage Bookmark' => '',
     'View your bookmark stream' => '',
 ];

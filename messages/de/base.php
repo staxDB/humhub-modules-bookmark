@@ -17,7 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Access denied!' => '',
+    'Access denied!' => 'Zugriff verweigert!',
     'Adds a bookmark link for content.' => 'Fügt ein Lesezeichen-Link für Inhalte hinzu.',
     'Bookmark' => 'Lesezeichen',
     'Bookmarks' => 'Lesezeichen',

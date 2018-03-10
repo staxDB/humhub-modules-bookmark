@@ -7,9 +7,9 @@ use \yii\base\Model;
 
 class ConfigForm extends Model
 {
-
     public $seeBookmarkCount = false;
     public $showFullWidth = true;
+    public $showPinnedFirst = false;
 
     /**
      * @inheritdocs
@@ -19,7 +19,15 @@ class ConfigForm extends Model
         $settings = Yii::$app->getModule('bookmark')->settings;
         $this->seeBookmarkCount = $settings->get('seeBookmarkCount', $this->seeBookmarkCount);
         $this->showFullWidth = $settings->get('showFullWidth', $this->showFullWidth);
+    }
 
+    /**
+     * Static initializer
+     * @return \self
+     */
+    public static function instantiate()
+    {
+        return new self;
     }
     
     /**
@@ -58,15 +66,6 @@ class ConfigForm extends Model
         $this->seeBookmarkCount = $settings->set('seeBookmarkCount', $this->seeBookmarkCount);
         $this->showFullWidth = $settings->set('showFullWidth', $this->showFullWidth);
         return true;
-    }
-
-    /**
-     * Static initializer
-     * @return \self
-     */
-    public static function instantiate()
-    {
-        return new self;
     }
 
 }

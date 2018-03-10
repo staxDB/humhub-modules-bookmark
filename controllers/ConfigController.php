@@ -13,6 +13,7 @@ use yii\helpers\Url;
 use humhub\modules\admin\permissions\ManageModules;
 use humhub\modules\admin\components\Controller;
 use humhub\modules\bookmark\models\forms\ConfigForm;
+use humhub\modules\bookmark\models\forms\DefaultSettings;
 
 /**
  * 
@@ -38,14 +39,36 @@ class ConfigController extends Controller
 
     public function actionIndex()
     {
+        $model = new DefaultSettings();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $this->view->saved();
+        }
+
+        return $this->render('@bookmark/views/common/defaultConfig', [
+            'model' => $model
+        ]);
+    }
+
+    public function actionResetConfig()
+    {
+        $model = new DefaultSettings();
+        $model->reset();
+        $this->view->saved();
+        return $this->render('@bookmark/views/common/defaultConfig', [
+            'model' => $model
+        ]);
+    }
+
+    public function actionConfig()
+    {
         $model = new ConfigForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $this->view->saved();
-            return $this->redirect(Url::toRoute('index'));
         }
 
-        return $this->render('index', [
+        return $this->render('config', [
             'model' => $model
         ]);
     }
