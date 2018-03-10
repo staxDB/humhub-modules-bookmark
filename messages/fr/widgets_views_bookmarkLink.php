@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Set Bookmark' => '',
     ' bookmarked this.' => ' l\' a mis en signet',
     'Bookmark' => 'Définir un signet',
     'Remove bookmark' => 'Supprimer le signet',

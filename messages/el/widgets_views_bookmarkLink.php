@@ -20,6 +20,7 @@ return [
     ' bookmarked this.' => '',
     'Bookmark' => '',
     'Remove bookmark' => '',
+    'Set Bookmark' => '',
     'You' => '',
     'You bookmarked this.' => '',
     'and {count} more bookmarked this.' => '',

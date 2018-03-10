@@ -12,10 +12,10 @@ humhub\modules\bookmark\assets\BookmarkAsset::register($this);
         <?php echo Html::a(Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Bookmark'), Yii::$app->user->loginUrl, ['data-target' => '#globalModal']); ?>
     <?php else: ?>
         <a href="#" data-action-click="bookmark.toggleBookmark" data-action-url="<?= $bookmarkUrl ?>" class="bookmark bookmarkAnchor" style="<?= (!$currentUserBookmarked) ? '' : 'display:none'?>">
-            <?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Bookmark') ?>
+            <span><?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Set Bookmark') ?></span>
         </a>
         <a href="#" data-action-click="bookmark.toggleBookmark" data-action-url="<?= $unbookmarkUrl ?>" class="unbookmark bookmarkAnchor" style="<?= ($currentUserBookmarked) ? '' : 'display:none'?>">
-            <?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Remove bookmark') ?>
+            <span><?= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Remove bookmark') ?></span>
         </a>
     <?php endif; ?>
 
