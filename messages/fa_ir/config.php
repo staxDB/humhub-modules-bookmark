@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<strong>Bookmark</strong> module configuration' => '',
     'Default bookmark settings' => '',
     'Here you can configure default settings for bookmark streams. These settings can be overwritten on profile level.' => '',
     'Here you can configure default settings for your bookmark stream.' => '',
