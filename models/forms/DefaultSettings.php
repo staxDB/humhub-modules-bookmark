@@ -44,7 +44,7 @@ class DefaultSettings extends Model
 
     private function initSettings()
     {
-        $this->pinned_first = (int) $this->getSetting(self::SETTING_PINNED_FIRST, 1);
+        $this->pinned_first = (int) $this->getSetting(self::SETTING_PINNED_FIRST, 0);
     }
 
     /**

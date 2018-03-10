@@ -41,8 +41,6 @@ class BookmarkStream extends Stream
         $this->activeQuery->orWhere(['content.stream_channel' => null]);    // also show hidden contents
         $this->activeQuery->andWhere(['bookmark.created_by' => $user->id]);
 
-
-
         if ($defaultSettings->pinned_first) {
             // Add all pinned contents to initial request
             if ($this->isInitialRequest()) {
