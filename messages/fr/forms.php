@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Back to modules' => '',
     '<strong>Bookmark</strong> module configuration' => 'Configuration du module de <strong>signet</strong>',
     'Bookmark view settings' => 'Paramètres de vue des signets',
     'Here you can change the view settings for bookmarks.' => 'Ici, vous pouvez modifier les paramètres d\'affichage des signets.',

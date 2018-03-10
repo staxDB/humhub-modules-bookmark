@@ -10,6 +10,8 @@
 
 use yii\widgets\ActiveForm;
 use \yii\helpers\Html;
+use yii\helpers\Url;
+use humhub\widgets\Button;
 use humhub\modules\bookmark\widgets\GlobalConfigMenu;
 ?>
 
@@ -34,6 +36,7 @@ use humhub\modules\bookmark\widgets\GlobalConfigMenu;
         <?= $form->field($model, 'showFullWidth')->checkbox(); ?>
 
         <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'data-ui-loader' => '']) ?>
+        <?= Button::defaultType(Yii::t('BookmarkModule.forms', 'Back to modules'))->link(Url::to(['/admin/module']))->loader(false); ?>
         <?php ActiveForm::end(); ?>
     </div>
 </div>

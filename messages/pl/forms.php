@@ -18,6 +18,7 @@
  */
 return [
     '<strong>Bookmark</strong> module configuration' => '',
+    'Back to modules' => '',
     'Bookmark view settings' => '',
     'Here you can change the view settings for bookmarks.' => '',
     'Show Bookmark-Count in braces.' => '',
