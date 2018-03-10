@@ -17,10 +17,10 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<strong>Bookmark</strong> module configuration' => '',
-    'Bookmark view settings' => '',
-    'Here you can change the view settings for bookmarks.' => '',
-    'Show Bookmark-Count in braces.' => '',
-    'Show global Bookmark-View in full width.' => '',
-    'Show pinned content first.' => '',
+    '<strong>Bookmark</strong> module configuration' => 'Configuration du module de <strong>signet</strong>',
+    'Bookmark view settings' => 'Paramètres de vue des signets',
+    'Here you can change the view settings for bookmarks.' => 'Ici, vous pouvez modifier les paramètres d\'affichage des signets.',
+    'Show Bookmark-Count in braces.' => 'Afficher le compte des signets dans les appareils orthopédiques.',
+    'Show global Bookmark-View in full width.' => 'Affichez le signet global en pleine largeur.',
+    'Show pinned content first.' => 'Montrer le contenu en premier.',
 ];

@@ -17,8 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Default bookmark settings' => '',
-    'Here you can configure default settings for bookmark streams. These settings can be overwritten on profile level.' => '',
-    'Here you can configure default settings for your bookmark stream.' => '',
-    'Reset' => '',
+    'Default bookmark settings' => 'Paramètres par défaut des signets',
+    'Here you can configure default settings for bookmark streams. These settings can be overwritten on profile level.' => 'Ici, vous pouvez configurer les paramètres par défaut pour les flux de signets. Ces paramètres peuvent être écrasés au niveau du profil.',
+    'Here you can configure default settings for your bookmark stream.' => 'Ici, vous pouvez configurer les paramètres par défaut pour votre flux de signets.',
+    'Reset' => 'Réinitialiser',
 ];

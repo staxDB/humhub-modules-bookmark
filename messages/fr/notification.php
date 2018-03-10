@@ -17,8 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '{displayNames} bookmarked your {contentTitle}.' => '',
-    '{displayNames} bookmarked {contentTitle}.' => '',
-    '{displayName} bookmarked your {contentTitle}.' => '',
-    '{displayName} bookmarked {contentTitle}.' => '',
+    '{displayNames} bookmarked your {contentTitle}.' => '{displayNames} ont mis en signet votre contenu {contentTitle}.',
+    '{displayNames} bookmarked {contentTitle}.' => '{displayNames} ont mis en signet votre contenu {contentTitle}.',
+    '{displayName} bookmarked your {contentTitle}.' => '{displayName} a mis en signet votre {contentTitle}.',
+    '{displayName} bookmarked {contentTitle}.' => '{displayName} a mis en signet votre {contentTitle}.',
 ];
