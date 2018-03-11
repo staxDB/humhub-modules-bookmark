@@ -23,6 +23,7 @@ class ViewBookmarkStream extends \humhub\libs\BasePermission
     public $defaultAllowedGroups = [
         User::USERGROUP_SELF,
         User::USERGROUP_FRIEND,
+        User::USERGROUP_USER
     ];
 
     /**
