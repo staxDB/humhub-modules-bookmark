@@ -28,8 +28,13 @@ class ManageBookmark extends \humhub\libs\BasePermission
      * @inheritdoc
      */
     protected $fixedGroups = [
-        User::USERGROUP_SELF
+        User::USERGROUP_SELF,
+        User::USERGROUP_USER,
+        User::USERGROUP_GUEST,
+        User::USERGROUP_FRIEND
     ];
+
+
 
     /**
      * @inheritdoc
