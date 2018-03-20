@@ -24,4 +24,5 @@ return [
     'Show Bookmark-Count in braces.' => 'Zeige Anzahl gesetzter Lesezeichen in Klammern.',
     'Show global Bookmark-View in full width.' => 'Zeige globale Lesezeichen-Ansicht in voller Breite.',
     'Show pinned content first.' => 'Zeige angeheftete Beiträge zuerst.',
+    'Show an icon for each entry.' => 'Für jeden Eintrag ein Symbol anzeigen.',
 ];

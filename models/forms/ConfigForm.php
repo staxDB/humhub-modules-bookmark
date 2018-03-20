@@ -9,7 +9,7 @@ class ConfigForm extends Model
 {
     public $seeBookmarkCount = false;
     public $showFullWidth = true;
-    public $showPinnedFirst = false;
+    public $showIcon = false;
 
     /**
      * @inheritdocs
@@ -19,7 +19,9 @@ class ConfigForm extends Model
         $settings = Yii::$app->getModule('bookmark')->settings;
         $this->seeBookmarkCount = $settings->get('seeBookmarkCount', $this->seeBookmarkCount);
         $this->showFullWidth = $settings->get('showFullWidth', $this->showFullWidth);
+        $this->showIcon = $settings->get('showIcon', $this->showIcon);
     }
+
 
     /**
      * Static initializer
@@ -36,7 +38,7 @@ class ConfigForm extends Model
     public function rules()
     {
         return [
-            [['seeBookmarkCount', 'showFullWidth'],  'boolean'],
+            [['seeBookmarkCount', 'showFullWidth', 'showIcon'],  'boolean'],
         ];
     }
 
@@ -50,6 +52,7 @@ class ConfigForm extends Model
         return array(
             'seeBookmarkCount' => Yii::t('BookmarkModule.forms', 'Show Bookmark-Count in braces.'),
             'showFullWidth' => Yii::t('BookmarkModule.forms', 'Show global Bookmark-View in full width.'),
+            'showIcon' => Yii::t('BookmarkModule.forms', 'Show an icon for each entry.'),
         );
     }
     
@@ -65,6 +68,7 @@ class ConfigForm extends Model
         $settings = Yii::$app->getModule('bookmark')->settings;
         $this->seeBookmarkCount = $settings->set('seeBookmarkCount', $this->seeBookmarkCount);
         $this->showFullWidth = $settings->set('showFullWidth', $this->showFullWidth);
+        $this->showIcon = $settings->set('showIcon', $this->showIcon);
         return true;
     }
 

@@ -34,8 +34,9 @@ use humhub\modules\bookmark\widgets\GlobalConfigMenu;
 
         <?= $form->field($model, 'seeBookmarkCount')->checkbox(); ?>
         <?= $form->field($model, 'showFullWidth')->checkbox(); ?>
+        <?= $form->field($model, 'showIcon')->checkbox(); ?>
 
-        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'data-ui-loader' => '']) ?>
+        <?= Html::submitButton(Yii::t('BookmarkModule.base', 'Submit'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']) ?>
         <?= Button::defaultType(Yii::t('BookmarkModule.forms', 'Back to modules'))->link(Url::to(['/admin/module']))->loader(false); ?>
         <?php ActiveForm::end(); ?>
     </div>

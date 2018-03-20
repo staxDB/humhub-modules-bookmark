@@ -111,7 +111,7 @@ class Events extends \yii\base\Object
      */
     public static function onWallEntryLinksInit($event)
     {
-        $event->sender->addWidget(widgets\BookmarkLink::className(), array('object' => $event->sender->object), array('sortOrder' => 10));
+        $event->sender->addWidget(widgets\BookmarkLink::className(), array('object' => $event->sender->object), array('sortOrder' => 1));
     }
 
 }

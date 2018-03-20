@@ -68,7 +68,7 @@ class ConfigController extends Controller
             $this->view->saved();
         }
 
-        return $this->render('config', [
+        return $this->render('@bookmark/views/config/config', [
             'model' => $model
         ]);
     }
