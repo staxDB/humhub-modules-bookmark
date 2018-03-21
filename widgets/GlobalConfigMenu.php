@@ -36,7 +36,7 @@ class GlobalConfigMenu extends SettingsTabs
                 'label' => Yii::t('BookmarkModule.widgets_GlobalConfigMenu', 'Global Settings'),
                 'url' => Url::toRoute(['/bookmark/config/config']),
                 'active' => $this->isCurrentRoute('bookmark', 'config', 'config'),
-                'sortOrder' => 30
+                'sortOrder' => 20
             ],
         ];
 

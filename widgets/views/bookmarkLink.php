@@ -3,13 +3,16 @@
 use yii\helpers\Html;
 
 humhub\modules\bookmark\assets\BookmarkAsset::register($this);
+
+$color = Html::encode($settings->iconColor);
+
 $bookmarkText = '<span>';
 $bookmarkText .= ($settings->showIcon) ? '<i class="fa fa-bookmark-o" style="margin-right: 3px;"></i>' : '';
 $bookmarkText.= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Set Bookmark');
 $bookmarkText .= '</span>';
 
 $unbookmarkText = '<span>';
-$unbookmarkText .= ($settings->showIcon) ? '<i class="fa fa-bookmark" style="color:#E55107; margin-right: 3px;"></i>' : '';
+$unbookmarkText .= ($settings->showIcon) ? '<i class="fa fa-bookmark" style="color:' . $color . '; margin-right: 3px;"></i>' : '';
 $unbookmarkText.= Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Remove bookmark');
 $unbookmarkText .= '</span>';
 
@@ -19,7 +22,7 @@ $unbookmarkText .= '</span>';
 
     <?php if (Yii::$app->user->isGuest): ?>
 
-        <?php echo Html::a(Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Bookmark'), Yii::$app->user->loginUrl, ['data-target' => '#globalModal']); ?>
+        <?= Html::a(Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Bookmark'), Yii::$app->user->loginUrl, ['data-target' => '#globalModal']); ?>
     <?php else: ?>
 
         <?= Html::a($bookmarkText, '#', [
@@ -51,8 +54,3 @@ $unbookmarkText .= '</span>';
     <?php endif; ?>
 
 </span>
-<!--<script>-->
-<!--    $(document).ready(function() {-->
-<!--        $('[data-toggle="tooltip"]').tooltip();-->
-<!--    });-->
-<!--</script>-->

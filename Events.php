@@ -8,6 +8,7 @@
 
 namespace humhub\modules\bookmark;
 
+use humhub\modules\bookmark\models\forms\ConfigForm;
 use humhub\modules\bookmark\permissions\ViewBookmarkStream;
 use Yii;
 use yii\helpers\Url;
@@ -111,7 +112,7 @@ class Events extends \yii\base\Object
      */
     public static function onWallEntryLinksInit($event)
     {
-        $event->sender->addWidget(widgets\BookmarkLink::className(), array('object' => $event->sender->object), array('sortOrder' => 1));
+        $event->sender->addWidget(widgets\BookmarkLink::className(), ['object' => $event->sender->object], ['sortOrder' => ConfigForm::instantiate()->sortOrder]);
     }
 
 }
