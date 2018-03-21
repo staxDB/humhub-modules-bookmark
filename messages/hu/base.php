@@ -22,4 +22,5 @@ return [
     'Bookmark' => '',
     'Bookmarks' => '',
     'Shows up your bookmarked content.' => '',
+    'Submit' => '',
 ];

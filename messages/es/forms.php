@@ -21,7 +21,11 @@ return [
     'Back to modules' => '',
     'Bookmark view settings' => '',
     'Here you can change the view settings for bookmarks.' => '',
+    'Icon color' => '',
+    'Select color' => '',
     'Show Bookmark-Count in braces.' => '',
+    'Show an icon for each entry.' => '',
     'Show global Bookmark-View in full width.' => '',
     'Show pinned content first.' => '',
+    'Sort order' => '',
 ];

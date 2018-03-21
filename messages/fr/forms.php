@@ -18,6 +18,10 @@
  */
 return [
     'Back to modules' => '',
+    'Icon color' => '',
+    'Select color' => '',
+    'Show an icon for each entry.' => '',
+    'Sort order' => '',
     '<strong>Bookmark</strong> module configuration' => 'Configuration du module de <strong>signet</strong>',
     'Bookmark view settings' => 'Paramètres de vue des signets',
     'Here you can change the view settings for bookmarks.' => 'Ici, vous pouvez modifier les paramètres d\'affichage des signets.',

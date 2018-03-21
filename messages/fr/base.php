@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Submit' => '',
     'Access denied!' => 'Accès refusé!',
     'Adds a bookmark link for content.' => 'Ajoute un lien de signet pour le contenu.',
     'Bookmark' => 'Signet',

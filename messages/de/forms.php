@@ -17,15 +17,15 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Back to modules' => 'Zurück zu den Modulen',
+    'Select color' => '',
     '<strong>Bookmark</strong> module configuration' => '<strong>Lesezeichen</strong> Modul-Konfiguration',
+    'Back to modules' => 'Zurück zu den Modulen',
     'Bookmark view settings' => 'Lesezeichen Ansichts-Einstellungen',
     'Here you can change the view settings for bookmarks.' => 'Hier kannst du die Ansichts-Einstellungen für Lesezeichen anpassen.',
+    'Icon color' => 'Symbol-Farbe',
     'Show Bookmark-Count in braces.' => 'Zeige Anzahl gesetzter Lesezeichen in Klammern.',
+    'Show an icon for each entry.' => 'Für jeden Eintrag ein Symbol anzeigen.',
     'Show global Bookmark-View in full width.' => 'Zeige globale Lesezeichen-Ansicht in voller Breite.',
     'Show pinned content first.' => 'Zeige angeheftete Beiträge zuerst.',
-    'Show an icon for each entry.' => 'Für jeden Eintrag ein Symbol anzeigen.',
-    'Icon color' => 'Symbol-Farbe',
     'Sort order' => 'Sortierung',
-
 ];

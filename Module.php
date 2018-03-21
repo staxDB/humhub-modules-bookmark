@@ -84,10 +84,20 @@ class Module extends ContentContainerModule
     /**
      * @inheritdoc
      */
-    public function getNotifications() 
+    public function getNotifications()
     {
        return [
            'humhub\modules\bookmark\notifications\NewBookmark'
+       ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getActivityClasses()
+    {
+       return [
+           'humhub\modules\bookmark\activities\Bookmarked'
        ];
     }
 
