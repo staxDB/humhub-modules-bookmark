@@ -46,13 +46,13 @@ class ProfileBookmarkStream extends Stream
         $this->activeQuery->andWhere(['bookmark.created_by' => $this->contentContainer->id]);
 
         // Limit to public posts when no member
-        if (!$this->contentContainer->canAccessPrivateContent($this->user)) {
-            if (!Yii::$app->user->isGuest) {
-                $this->activeQuery->andWhere("content.visibility=" . Content::VISIBILITY_PUBLIC . " OR content.created_by = :userId", [':userId' => $this->user->id]);
-            } else {
-                $this->activeQuery->andWhere("content.visibility=" . Content::VISIBILITY_PUBLIC);
-            }
-        }
+//        if (!$this->contentContainer->canAccessPrivateContent($this->user)) {
+//            if (!Yii::$app->user->isGuest) {
+//                $this->activeQuery->andWhere("content.visibility=" . Content::VISIBILITY_PUBLIC . " OR content.created_by = :userId", [':userId' => $this->user->id]);
+//            } else {
+//                $this->activeQuery->andWhere("content.visibility=" . Content::VISIBILITY_PUBLIC);
+//            }
+//        }
 
         if ($defaultSettings->pinned_first) {
             // Add all pinned contents to initial request
