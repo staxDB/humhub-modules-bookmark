@@ -17,7 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<b>This bookmark stream is still empty!</b>' => '<b>Ce flux de signets est toujours vide!</b>',
-    '<b>This bookmark stream is still empty</b>' => '<b>Ce flux de signets est toujours vide</b>',
-    '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '<b>Vous n\'avez pas encore placé de signet!</b><br>Cherchez le contenu qui vous intéresse et ajoutez-le à vos favoris!',
+    '<b>This bookmark stream is still empty!</b>' => '<b>Ce flux de signets est vide.</b>',
+    '<b>This bookmark stream is still empty</b>' => '<b>Ce flux de signets est vide.</b>',
+    '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '<b>Vous n\'avez pas encore placé aucun signet.</b><br>Cherchez le contenu qui vous intéresse et ajoutez-le à vos favoris.',
 ];

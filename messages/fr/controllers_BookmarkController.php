@@ -17,5 +17,5 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<strong>Users</strong> who bookmarked this' => '<strong>Utilisateurs</strong> qui ont marqué ce signet',
+    '<strong>Users</strong> who bookmarked this' => '<strong>Les utilisateurs</strong> qui ont mis en signet ce contenu',
 ];

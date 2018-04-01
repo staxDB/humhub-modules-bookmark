@@ -17,6 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Bookmarked' => 'Signet',
-    'Whenever someone bookmarked something (e.g. a post or comment).' => 'Chaque fois que quelqu\'un signet quelque chose (par exemple, un message ou un commentaire).',
+    'Bookmarked' => 'Signets',
+    'Whenever someone bookmarked something (e.g. a post or comment).' => 'Chaque fois que quelqu\'un met en signet quelque chose (p.ex. une publication ou un commentaire)',
 ];

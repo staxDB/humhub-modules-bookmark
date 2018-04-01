@@ -18,5 +18,5 @@
  */
 return [
     'Defaults' => 'Défauts',
-    'Global Settings' => 'Paramètres globaux',
+    'Global Settings' => 'Paramètres généraux',
 ];

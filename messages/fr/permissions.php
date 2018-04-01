@@ -19,6 +19,6 @@
 return [
     'Allow other users to see your bookmarks' => 'Permettre aux autres utilisateurs de voir vos signets',
     'Can manage Bookmark entries.' => 'Peut gérer les entrées de signets.',
-    'Manage Bookmark' => 'Gérer le signet',
+    'Manage Bookmark' => 'Gérer les signets',
     'View your bookmark stream' => 'Visualisez votre flux de signets',
 ];
