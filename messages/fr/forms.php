@@ -18,7 +18,7 @@
  */
 return [
     'Back to modules' => 'Retour aux modules',
-    'Icon color' => 'Couleur de l'icône',
+    'Icon color' => 'Couleur de l\'icône',
     'Select color' => 'Sélectionnez une couleur',
     'Show an icon for each entry.' => 'Afficher une icône devant le bouton Favoris',
     'Sort order' => 'Ordre de tri',

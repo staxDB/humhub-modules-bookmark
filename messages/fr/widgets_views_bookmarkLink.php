@@ -18,7 +18,7 @@
  */
 return [
     'Set Bookmark' => 'Favoris',
-    ' bookmarked this.' => ' l\'avez mis en favoris',
+    ' bookmarked this.' => ' avez mis ce contenu en favoris',
     'Bookmark' => 'Favoris',
     'Remove bookmark' => 'Supprimer le favoris',
     'You' => 'Vous',
