@@ -18,10 +18,10 @@
  */
 return [
     'Set Bookmark' => 'Favoris',
-    ' bookmarked this.' => ' avez mis ce contenu en favoris',
+    ' bookmarked this.' => ' a mis ce contenu dans ses favoris',
     'Bookmark' => 'Favoris',
     'Remove bookmark' => 'Retirer des favoris',
     'You' => 'Vous',
-    'You bookmarked this.' => 'Vous avez mis ce contenu en favoris.',
-    'and {count} more bookmarked this.' => 'et {count} favoris supplémentaires.',
+    'You bookmarked this.' => 'Vous avez mis ce contenu dans vos favoris.',
+    'and {count} more bookmarked this.' => 'et {count} autres ont mis ce contenu dans leur favoris.',
 ];
