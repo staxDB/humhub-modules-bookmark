@@ -19,8 +19,8 @@
 return [
     'Submit' => 'Envoyer',
     'Access denied!' => 'Accès refusé.',
-    'Adds a bookmark link for content.' => 'Ajouter des signets.',
-    'Bookmark' => 'Signet',
-    'Bookmarks' => 'Signets',
-    'Shows up your bookmarked content.' => 'Afficher le contenu de vos signets.',
+    'Adds a bookmark link for content.' => 'Ajouter des contenus à vos favoris.',
+    'Bookmark' => 'Favoris',
+    'Bookmarks' => 'Favoris',
+    'Shows up your bookmarked content.' => 'Afficher le contenu de vos favoris.',
 ];

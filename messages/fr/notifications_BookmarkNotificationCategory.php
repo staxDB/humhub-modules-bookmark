@@ -18,5 +18,5 @@
  */
 return [
     'Bookmark' => 'Signet',
-    'Receive Notifications when someone bookmarked your content.' => 'Recevoir une notification lorsque quelqu\'un met en signet vos publications.',
+    'Receive Notifications when someone bookmarked your content.' => 'Recevoir une notification lorsque quelqu\'un met en favoris vos publications.',
 ];

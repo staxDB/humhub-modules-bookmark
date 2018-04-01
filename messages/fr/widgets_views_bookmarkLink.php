@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Set Bookmark' => 'Signet',
-    ' bookmarked this.' => ' l\'avez mis en signet',
-    'Bookmark' => 'Définir un signet',
-    'Remove bookmark' => 'Supprimer le signet',
+    'Set Bookmark' => 'Favoris',
+    ' bookmarked this.' => ' l\'avez mis en favoris',
+    'Bookmark' => 'Favoris',
+    'Remove bookmark' => 'Supprimer le favoris',
     'You' => 'Vous',
-    'You bookmarked this.' => 'Vous l'avez mis en signet.',
-    'and {count} more bookmarked this.' => 'et {count} signets supplémentaires.',
+    'You bookmarked this.' => 'Vous avez mis ce contenu en favoris.',
+    'and {count} more bookmarked this.' => 'et {count} favoris supplémentaires.',
 ];
