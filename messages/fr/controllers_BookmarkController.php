@@ -17,5 +17,5 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<strong>Users</strong> who bookmarked this' => '<strong>Les utilisateurs</strong> qui ont mis ce contenu dans leur favoris',
+    '<strong>Users</strong> who bookmarked this' => '<strong>Les utilisateurs</strong> qui ont ajouté ce contenu à leur favoris',
 ];

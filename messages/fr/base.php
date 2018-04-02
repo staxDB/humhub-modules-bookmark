@@ -22,5 +22,5 @@ return [
     'Adds a bookmark link for content.' => 'Ajouter des contenus à vos favoris.',
     'Bookmark' => 'Favoris',
     'Bookmarks' => 'Favoris',
-    'Shows up your bookmarked content.' => 'Afficher le contenu de vos favoris.',
+    'Shows up your bookmarked content.' => 'Ajouter le module Favoris à votre profil et partager votre liste de favoris.',
 ];

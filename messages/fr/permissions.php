@@ -17,7 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Allow other users to see your bookmarks' => 'Permettre aux autres utilisateurs de voir vos favoris',
+    'Allow other users to see your bookmarks' => 'Permettre aux autres utilisateurs de consulter votre liste de favoris',
     'Can manage Bookmark entries.' => 'Peut gérer les entrées des favoris.',
     'Manage Bookmark' => 'Gérer les favoris',
     'View your bookmark stream' => 'Voir votre liste de favoris',

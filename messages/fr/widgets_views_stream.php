@@ -19,5 +19,5 @@
 return [
     '<b>This bookmark stream is still empty!</b>' => '<b>Cette liste de favoris est vide.</b>',
     '<b>This bookmark stream is still empty</b>' => '<b>Cette liste de favoris est vide.</b>',
-    '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '<b>Vous n\'avez pas encore aucun favoris.</b><br>Cherchez le contenu qui vous intéresse et ajoutez-le à vos favoris.',
+    '<b>You have not set a bookmark yet!</b><br>Search for content that interests you and bookmark it!' => '<b>Vous n\'avez encore aucun favoris.</b><br>Cherchez le contenu qui vous intéresse et ajoutez-le à vos favoris.',
 ];

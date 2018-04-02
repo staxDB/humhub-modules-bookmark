@@ -18,5 +18,5 @@
  */
 return [
     'Bookmarked' => 'Favoris',
-    'Whenever someone bookmarked something (e.g. a post or comment).' => 'Chaque fois que quelqu\'un met votre contenu dans ses favoris (p.ex. une publication ou un commentaire)',
+    'Whenever someone bookmarked something (e.g. a post or comment).' => 'Chaque fois que quelqu\'un ajoute du contenu dans ses favoris (p.ex. une publication ou un commentaire)',
 ];

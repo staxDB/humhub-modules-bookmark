@@ -18,7 +18,7 @@
  */
 return [
     'Default bookmark settings' => 'Paramètres par défaut des favoris',
-    'Here you can configure default settings for bookmark streams. These settings can be overwritten on profile level.' => 'Ici, vous pouvez configurer les paramètres par défaut pour la liste de favoris. Ces paramètres peuvent être définis également au niveau du profil de l\'utilisateur.',
+    'Here you can configure default settings for bookmark streams. These settings can be overwritten on profile level.' => 'Ici, vous pouvez configurer les paramètres par défaut des listes de favoris. Ces paramètres peuvent être personnalisés par chaque utilisateur.',
     'Here you can configure default settings for your bookmark stream.' => 'Ici, vous pouvez configurer les paramètres par défaut de votre liste de favoris.',
     'Reset' => 'Réinitialiser',
 ];

@@ -17,6 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Bookmark' => 'Signet',
-    'Receive Notifications when someone bookmarked your content.' => 'Recevoir une notification lorsque quelqu\'un ajoute votre contenu dans ses favoris.',
+    'Bookmark' => 'Favoris',
+    'Receive Notifications when someone bookmarked your content.' => 'Recevoir une notification lorsqu\'on ajoute mes publications dans des favoris.',
 ];
