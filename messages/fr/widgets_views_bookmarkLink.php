@@ -22,6 +22,6 @@ return [
     'Bookmark' => 'Favoris',
     'Remove bookmark' => 'Retirer des favoris',
     'You' => 'Vous',
-    'You bookmarked this.' => 'Vous avez ajouté cette publication à vos favoris',
+    'You bookmarked this.' => 'Cette publication est dans vos favoris',
     'and {count} more bookmarked this.' => 'et {count} autres ont ajoutés cette publication à leur favoris',
 ];
