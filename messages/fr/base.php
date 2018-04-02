@@ -19,7 +19,7 @@
 return [
     'Submit' => 'Envoyer',
     'Access denied!' => 'Accès refusé.',
-    'Adds a bookmark link for content.' => 'Ce module permet d'ajouter à ses favoris du contenu.',
+    'Adds a bookmark link for content.' => 'Ce module permet d\'ajouter à ses favoris du contenu.',
     'Bookmark' => 'Favoris',
     'Bookmarks' => 'Favoris',
     'Shows up your bookmarked content.' => 'Ajouter le module Favoris à votre profil pour partager votre liste de favoris.',
