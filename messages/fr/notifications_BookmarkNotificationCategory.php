@@ -18,5 +18,5 @@
  */
 return [
     'Bookmark' => 'Favoris',
-    'Receive Notifications when someone bookmarked your content.' => 'Recevoir une notification lorsqu\'on ajoute à des favoris mes publications',
+    'Receive Notifications when someone bookmarked your content.' => 'Recevoir une notification lorsqu\'on ajoute mes publications aux favoris',
 ];
