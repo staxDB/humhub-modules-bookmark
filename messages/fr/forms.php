@@ -17,15 +17,15 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Back to modules' => '',
-    'Icon color' => '',
-    'Select color' => '',
-    'Show an icon for each entry.' => '',
-    'Sort order' => '',
-    '<strong>Bookmark</strong> module configuration' => 'Configuration du module de <strong>signet</strong>',
-    'Bookmark view settings' => 'Paramètres de vue des signets',
-    'Here you can change the view settings for bookmarks.' => 'Ici, vous pouvez modifier les paramètres d\'affichage des signets.',
-    'Show Bookmark-Count in braces.' => 'Afficher le compte des signets dans les appareils orthopédiques.',
-    'Show global Bookmark-View in full width.' => 'Affichez le signet global en pleine largeur.',
-    'Show pinned content first.' => 'Montrer le contenu en premier.',
+    'Back to modules' => 'Retour aux modules',
+    'Icon color' => 'Couleur de l\'icône',
+    'Select color' => 'Sélectionnez une couleur',
+    'Show an icon for each entry.' => 'Afficher une icône devant le bouton',
+    'Sort order' => 'Ordre de tri',
+    '<strong>Bookmark</strong> module configuration' => 'Configuration du module <strong>favoris</strong>',
+    'Bookmark view settings' => 'Paramètres d\'affichage des favoris',
+    'Here you can change the view settings for bookmarks.' => 'Ici, vous pouvez modifier les paramètres d\'affichage des favoris.',
+    'Show Bookmark-Count in braces.' => 'Afficher le nombre de favoris (à droire du bouton)',
+    'Show global Bookmark-View in full width.' => 'Afficher la liste des favoris sur toute la largeur',
+    'Show pinned content first.' => 'Afficher le contenu mis en avant en priorité',
 ];

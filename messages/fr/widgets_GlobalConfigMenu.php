@@ -17,6 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Defaults' => 'Défauts',
-    'Global Settings' => 'Paramètres globaux',
+    'Defaults' => 'Général',
+    'Global Settings' => 'Paramètres généraux',
 ];

@@ -17,5 +17,5 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '{userDisplayName} bookmarked {contentTitle}' => '{userDisplayName} signet {contentTitle}',
+    '{userDisplayName} bookmarked {contentTitle}' => '{userDisplayName} a ajouté à ses favoris {contentTitle}',
 ];
