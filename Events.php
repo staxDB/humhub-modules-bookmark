@@ -16,10 +16,10 @@ use humhub\modules\bookmark\models\Bookmark;
 
 /**
  * Events provides callbacks to handle events.
- * 
+ *
  * @author luke
  */
-class Events extends \yii\base\Object
+class Events extends \yii\base\BaseObject
 {
 
     /**
