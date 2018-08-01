@@ -19,7 +19,7 @@ use humhub\modules\bookmark\models\Bookmark;
  *
  * @author luke
  */
-class Events extends \yii\base\BaseObject
+class Events
 {
 
     /**
