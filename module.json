@@ -7,9 +7,9 @@
     "favorite",
     "remember"
   ],
-  "version": "0.1.3",
+  "version": "0.2",
   "humhub": {
-    "minVersion": "1.2.3"
+    "minVersion": "1.3"
   },
   "screenshots": [
     "assets/screen1.png",

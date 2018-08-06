@@ -8,7 +8,7 @@
 /* @var $this yii\web\View */
 /* @var $model \humhub\modules\bookmark\models\forms\ConfigForm */
 
-use yii\widgets\ActiveForm;
+use humhub\modules\ui\form\widgets\ActiveForm;
 use \yii\helpers\Html;
 use yii\helpers\Url;
 use humhub\widgets\Button;
