@@ -1,6 +1,10 @@
 Changelog
 =========
-
+v.0.2
+----------------------
+- Ready for Humhub v.1.3
+- Ready for PHP 7.2
+  
 v.0.1.4
 ----------------------
 - Fixed: Wrong Query for Profile Bookmark Stream.
