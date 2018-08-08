@@ -24,5 +24,6 @@ __Author:__ David Born ([staxDB](https://github.com/staxDB))
 
 ## Todo
 - add translations
+- search for topics in bookmark-stream (current issue of humhub 1.3)
 - suggest posts that you may like as bookmarks
 - receive update information about changes to bookmarked posts
