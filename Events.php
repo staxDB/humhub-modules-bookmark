@@ -12,6 +12,7 @@ use humhub\modules\bookmark\models\forms\ConfigForm;
 use humhub\modules\bookmark\permissions\ViewBookmarkStream;
 use Yii;
 use yii\helpers\Url;
+use yii\base\BaseObject;
 use humhub\modules\bookmark\models\Bookmark;
 
 /**
@@ -19,7 +20,7 @@ use humhub\modules\bookmark\models\Bookmark;
  *
  * @author luke
  */
-class Events
+class Events extends BaseObject
 {
 
     /**
