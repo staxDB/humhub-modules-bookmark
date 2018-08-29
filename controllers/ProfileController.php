@@ -17,13 +17,13 @@ class ProfileController extends ContentContainerController
 
     public function actions()
     {
-        return array(
-            'stream' => array(
-                'class' => ProfileBookmarkStream::className(),
+        return [
+            'stream' => [
+                'class' => ProfileBookmarkStream::class,
                 'mode' => ProfileBookmarkStream::MODE_NORMAL,
                 'contentContainer' => $this->contentContainer
-            ),
-        );
+            ],
+        ];
     }
 
     /**
@@ -35,9 +35,9 @@ class ProfileController extends ContentContainerController
             throw new HttpException(403, 'Forbidden');
         }
 
-        return $this->render('show', array(
+        return $this->render('show', [
             'contentContainer' => $this->contentContainer
-        ));
+        ]);
     }
 
     /**
