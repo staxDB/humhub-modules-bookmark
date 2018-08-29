@@ -35,7 +35,7 @@ use humhub\modules\bookmark\widgets\GlobalConfigMenu;
         <?= $form->field($model, 'seeBookmarkCount')->checkbox(); ?>
         <?= $form->field($model, 'showFullWidth')->checkbox(); ?>
         <?= $form->field($model, 'showIcon')->checkbox(); ?>
-        <?= $form->field($model, 'iconColor')->widget(\kartik\color\ColorInput::className(), [
+        <?= $form->field($model, 'iconColor')->widget(\kartik\color\ColorInput::class, [
             'options' => ['placeholder' => Yii::t('BookmarkModule.forms', 'Select color')],
         ]);
         ?>

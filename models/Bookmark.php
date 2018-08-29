@@ -49,9 +49,9 @@ class Bookmark extends ContentAddonActiveRecord
     {
         return [
             [
-                'class' => \humhub\components\behaviors\PolymorphicRelation::className(),
+                'class' => \humhub\components\behaviors\PolymorphicRelation::class,
                 'mustBeInstanceOf' => [
-                    \yii\db\ActiveRecord::className(),
+                    \yii\db\ActiveRecord::class,
                 ]
             ]
         ];
@@ -62,10 +62,10 @@ class Bookmark extends ContentAddonActiveRecord
      */
     public function rules()
     {
-        return array(
-            array(['object_model', 'object_id'], 'required'),
-            array(['id', 'object_id'], 'integer'),
-        );
+        return [
+            [['object_model', 'object_id'], 'required'],
+            [['id', 'object_id'], 'integer'],
+        ];
     }
 
     /**
@@ -77,7 +77,7 @@ class Bookmark extends ContentAddonActiveRecord
         $cacheValue = Yii::$app->cache->get($cacheId);
 
         if ($cacheValue === false) {
-            $newCacheValue = Bookmark::findAll(array('object_model' => $objectModel, 'object_id' => $objectId));
+            $newCacheValue = Bookmark::findAll(['object_model' => $objectModel, 'object_id' => $objectId]);
             Yii::$app->cache->set($cacheId, $newCacheValue, Yii::$app->settings->get('cache.expireTime'));
             return $newCacheValue;
         } else {

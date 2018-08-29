@@ -30,7 +30,7 @@ class Module extends ContentContainerModule
     public function getContentContainerTypes()
     {
         return [
-            User::className(),
+            User::class,
         ];
     }
 

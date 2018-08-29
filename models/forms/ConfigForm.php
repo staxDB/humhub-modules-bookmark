@@ -75,13 +75,13 @@ class ConfigForm extends Model
      */
     public function attributeLabels()
     {
-        return array(
+        return [
             'seeBookmarkCount' => Yii::t('BookmarkModule.forms', 'Show Bookmark-Count in braces.'),
             'showFullWidth' => Yii::t('BookmarkModule.forms', 'Show global Bookmark-View in full width.'),
             'showIcon' => Yii::t('BookmarkModule.forms', 'Show an icon for each entry.'),
             'iconColor' => Yii::t('BookmarkModule.forms', 'Icon color'),
             'sortOrder' => Yii::t('BookmarkModule.forms', 'Sort order'),
-        );
+        ];
     }
     
     /**

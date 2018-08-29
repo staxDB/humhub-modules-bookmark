@@ -28,7 +28,7 @@ class IndexController extends Controller
     {
         return [
             'acl' => [
-                'class' => \humhub\components\behaviors\AccessControl::className(),
+                'class' => \humhub\components\behaviors\AccessControl::class,
                 'guestAllowedActions' => [
                 ]
             ]
@@ -42,7 +42,7 @@ class IndexController extends Controller
     {
         return [
             'stream' => [
-                'class' => BookmarkStream::className(),
+                'class' => BookmarkStream::class,
                 'mode' => BookmarkStream::MODE_NORMAL
             ]
         ];

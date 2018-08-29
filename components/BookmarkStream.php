@@ -83,7 +83,7 @@ class BookmarkStream extends Stream
         // In case of an space entry, we need to join the space membership to verify the user can see private space content
         $condition .= ' (contentcontainer.class=:spaceModel AND content.visibility = 0 AND space_membership.status = ' . Membership::STATUS_MEMBER . ') OR ';
         $condition .= ' (content.visibility = 1 OR content.visibility IS NULL) ';
-        $this->activeQuery->andWhere($condition, [':userId' => $this->user->id, ':spaceModel' => Space::className(), ':userModel' => User::className()]);
+        $this->activeQuery->andWhere($condition, [':userId' => $this->user->id, ':spaceModel' => Space::class, ':userModel' => User::className()]);
     }
 
 }
