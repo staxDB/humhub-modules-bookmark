@@ -81,9 +81,9 @@ class DefaultSettings extends Model
      */
     public function attributeLabels()
     {
-        return array(
+        return [
             'pinned_first' => Yii::t('BookmarkModule.forms', 'Show pinned content first.'),
-        );
+        ];
     }
 
     public function save()
