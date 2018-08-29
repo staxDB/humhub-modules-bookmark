@@ -1,7 +1,9 @@
 <?php
+
 /**
  * @var \humhub\modules\user\models\User $contentContainer
  */
+
 use humhub\modules\bookmark\widgets\BookmarkContent;
 use humhub\modules\dashboard\widgets\Sidebar;
 use humhub\modules\activity\widgets\Stream;
@@ -24,7 +26,7 @@ use humhub\modules\activity\widgets\Stream;
             <?= Sidebar::widget([
                 'widgets' => [
                     [
-                        Stream::className(),
+                        Stream::class,
                         ['streamAction' => '/dashboard/dashboard/stream'],
                         ['sortOrder' => 150]
                     ]
