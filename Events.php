@@ -33,14 +33,14 @@ class Events extends BaseObject
     {
 
         // Is Module enabled on this workspace?
-        $event->sender->addItem(array(
+        $event->sender->addItem([
             'label' => Yii::t('BookmarkModule.base', 'Bookmarks'),
             'id' => 'bookmark',
             'icon' => '<i class="fa fa-bookmark"></i>',
             'url' => Url::toRoute('/bookmark/index'),
             'sortOrder' => 100,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'bookmark'),
-        ));
+        ]);
     }
 
     public static function onProfileMenuInit($event)
@@ -63,7 +63,7 @@ class Events extends BaseObject
      */
     public static function onUserDelete($event)
     {
-        foreach (Bookmark::findAll(array('created_by' => $event->sender->id)) as $bookmark) {
+        foreach (Bookmark::findAll(['created_by' => $event->sender->id]) as $bookmark) {
             $bookmark->delete();
         }
 
@@ -77,7 +77,7 @@ class Events extends BaseObject
     {
         $record = $event->sender;
         if ($record->hasAttribute('id')) {
-            foreach (Bookmark::findAll(array('object_id' => $record->id, 'object_model' => $record->className())) as $bookmark) {
+            foreach (Bookmark::findAll(['object_id' => $record->id, 'object_model' => $record->className()]) as $bookmark) {
                 $bookmark->delete();
             }
         }
@@ -113,7 +113,7 @@ class Events extends BaseObject
      */
     public static function onWallEntryLinksInit($event)
     {
-        $event->sender->addWidget(widgets\BookmarkLink::className(), ['object' => $event->sender->object], ['sortOrder' => ConfigForm::instantiate()->sortOrder]);
+        $event->sender->addWidget(widgets\BookmarkLink::class, ['object' => $event->sender->object], ['sortOrder' => ConfigForm::instantiate()->sortOrder]);
     }
 
 }
