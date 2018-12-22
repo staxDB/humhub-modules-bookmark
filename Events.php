@@ -32,6 +32,10 @@ class Events extends BaseObject
     public static function onTopMenuInit($event)
     {
 
+        if (Yii::$app->user->isGuest) {
+            return;
+        }
+
         // Is Module enabled on this workspace?
         $event->sender->addItem([
             'label' => Yii::t('BookmarkModule.base', 'Bookmarks'),
