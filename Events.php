@@ -31,6 +31,9 @@ class Events extends BaseObject
      */
     public static function onTopMenuInit($event)
     {
+        // Do not show if not logged in as it is not possible to have bookmarks as a guest
+        if (Yii::$app->user->isGuest)
+            return;
 
         // Is Module enabled on this workspace?
         $event->sender->addItem([
