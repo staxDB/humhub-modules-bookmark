@@ -49,7 +49,7 @@ class ProfileController extends ContentContainerController
         $id = Yii::$app->request->get('id');
         $model = Bookmark::findOne(['id' => $id]);
 
-        if (!$model->content->canRead()) {
+        if (!$model->content->canView()) {
             throw new HttpException(403, Yii::t('BookmarkModule.base', 'Access denied!'));
         }
 

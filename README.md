@@ -11,6 +11,9 @@ Let your friend see your bookmarked posts.
 __Module website:__ <https://github.com/staxDB/humhub-modules-bookmark>  
 __Author:__ David Born ([staxDB](https://github.com/staxDB))
 
+## 0.3 works with
+- Humhub version 1.4.*
+
 ## 0.2 works with
 - Humhub version 1.3.*
 - PHP 7.2

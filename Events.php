@@ -35,10 +35,6 @@ class Events extends BaseObject
         if (Yii::$app->user->isGuest)
             return;
 
-        if (Yii::$app->user->isGuest) {
-            return;
-        }
-
         // Is Module enabled on this workspace?
         $event->sender->addItem([
             'label' => Yii::t('BookmarkModule.base', 'Bookmarks'),
