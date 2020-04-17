@@ -8,6 +8,7 @@
 
 namespace humhub\modules\bookmark\notifications;
 
+use humhub\modules\notification\models\Notification;
 use Yii;
 use yii\bootstrap\Html;
 use humhub\modules\notification\components\BaseNotification;
@@ -102,4 +103,12 @@ class NewBookmark extends BaseNotification
         return $this->source->getSource();
     }
 
+    /**
+     * {@inheritdoc}
+     * @return int the number of rows deleted
+     */
+    public static function deleteAll()
+    {
+        return Notification::deleteAll(['class' => NewBookmark::class]);
+    }
 }

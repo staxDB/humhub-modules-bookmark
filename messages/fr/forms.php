@@ -28,4 +28,5 @@ return [
     'Show Bookmark-Count in braces.' => 'Afficher le nombre de favoris (à droire du bouton)',
     'Show global Bookmark-View in full width.' => 'Afficher la liste des favoris sur toute la largeur',
     'Show pinned content first.' => 'Afficher le contenu mis en avant en priorité',
+    'Keep bookmarks private and do not send notifications.' => '',
 ];

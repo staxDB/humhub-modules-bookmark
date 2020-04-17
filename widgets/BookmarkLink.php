@@ -3,6 +3,7 @@
 namespace humhub\modules\bookmark\widgets;
 
 use humhub\modules\bookmark\models\forms\ConfigForm;
+use humhub\modules\bookmark\models\forms\DefaultSettings;
 use Yii;
 use humhub\modules\bookmark\models\Bookmark;
 use yii\helpers\Url;
@@ -37,10 +38,12 @@ class BookmarkLink extends \yii\base\Widget
         }
 
         $settings = ConfigForm::instantiate();
+        $defaultSettings = DefaultSettings::instantiate();
 
         return $this->render('bookmarkLink', array(
                     'bookmarks' => $bookmarks,
                     'settings' => $settings,
+                    'defaultSettings' => $defaultSettings,
                     'currentUserBookmarked' => $currentUserBookmarked,
                     'id' => $this->object->getUniqueId(),
                     'bookmarkUrl' => Url::to(['/bookmark/bookmark/bookmark', 'contentModel' => $this->object->className(), 'contentId' => $this->object->id]),

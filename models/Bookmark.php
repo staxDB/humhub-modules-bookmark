@@ -8,6 +8,7 @@
 
 namespace humhub\modules\bookmark\models;
 
+use humhub\modules\bookmark\models\forms\DefaultSettings;
 use Yii;
 use humhub\modules\content\components\ContentAddonActiveRecord;
 use humhub\modules\content\interfaces\ContentOwner;
@@ -69,7 +70,7 @@ class Bookmark extends ContentAddonActiveRecord
     }
 
     /**
-     * Bookmark Count for specifc model
+     * Bookmark Count for specific model
      */
     public static function GetBookmarks($objectModel, $objectId)
     {
@@ -92,12 +93,8 @@ class Bookmark extends ContentAddonActiveRecord
     {
         Yii::$app->cache->delete('bookmarks_' . $this->object_model . "_" . $this->object_id);
 
-        \humhub\modules\bookmark\activities\Bookmarked::instance()->about($this)->save();
-
-        if ($this->getSource() instanceof ContentOwner && $this->getSource()->content->createdBy !== null) {
-            // This is required for comments where $this->getSource()->createdBy contains the comment author.
-            $target = isset($this->getSource()->createdBy) ? $this->getSource()->createdBy : $this->getSource()->content->createdBy;
-            NewBookmark::instance()->from(Yii::$app->user->getIdentity())->about($this)->send($target);
+        if (!DefaultSettings::instantiate()->private_bookmarking) {
+            $this->createNotification();
         }
 
         return parent::afterSave($insert, $changedAttributes);
@@ -124,6 +121,15 @@ class Bookmark extends ContentAddonActiveRecord
     public function getBookmarkedRecord()
     {
         return $this->content->getPolymorphicRelation();
+    }
+
+    private function createNotification()
+    {
+        if ($this->getSource() instanceof ContentOwner && $this->getSource()->content->createdBy !== null) {
+            // This is required for comments where $this->getSource()->createdBy contains the comment author.
+            $target = isset($this->getSource()->createdBy) ? $this->getSource()->createdBy : $this->getSource()->content->createdBy;
+            NewBookmark::instance()->from(Yii::$app->user->getIdentity())->about($this)->send($target);
+        }
     }
 
 }

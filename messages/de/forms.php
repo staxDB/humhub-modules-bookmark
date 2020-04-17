@@ -28,4 +28,5 @@ return [
     'Show global Bookmark-View in full width.' => 'Zeige globale Lesezeichen-Ansicht in voller Breite.',
     'Show pinned content first.' => 'Zeige angeheftete Beiträge zuerst.',
     'Sort order' => 'Sortierung',
+    'Keep bookmarks private and do not send notifications.' => 'Lesezeichen privat halten und keine Benachrichtigungen senden.',
 ];

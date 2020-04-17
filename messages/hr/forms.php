@@ -28,4 +28,5 @@ return [
     'Show global Bookmark-View in full width.' => '',
     'Show pinned content first.' => '',
     'Sort order' => '',
+    'Keep bookmarks private and do not send notifications.' => '',
 ];

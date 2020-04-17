@@ -85,5 +85,4 @@ class BookmarkStream extends Stream
         $condition .= ' (content.visibility = 1 OR content.visibility IS NULL) ';
         $this->activeQuery->andWhere($condition, [':userId' => $this->user->id, ':spaceModel' => Space::class, ':userModel' => User::className()]);
     }
-
 }

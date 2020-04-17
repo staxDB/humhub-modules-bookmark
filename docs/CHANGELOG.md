@@ -1,5 +1,14 @@
 Changelog
 =========
+v0.4
+----------------------
+- Removed creation of social activity to keep bookmarks more private
+- Added configurable option to keep bookmarks private and don't notify users
+
+v0.3
+----------------------
+- Ready for Humhub v.1.4
+    
 v0.2.2
 ----------------------
 - Removed Deprecations:

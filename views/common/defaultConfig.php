@@ -50,6 +50,10 @@ $backUrl = $model->isGlobal()
             <?= $form->field($model, 'pinned_first')->checkbox() ?>
         </div>
 
+        <div class="">
+            <?= $form->field($model, 'private_bookmarking')->checkbox() ?>
+        </div>
+
         <?= Button::primary(Yii::t('base', 'Save'))->submit() ?>
         <?= Button::defaultType(Yii::t('BookmarkModule.forms', 'Back to modules'))->link($backUrl)->loader(false); ?>
 

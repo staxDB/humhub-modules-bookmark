@@ -1,8 +1,17 @@
 <?php
 
 use yii\helpers\Html;
+use humhub\modules\bookmark\assets\BookmarkAsset;
 
-humhub\modules\bookmark\assets\BookmarkAsset::register($this);
+/* @var $settings \humhub\modules\bookmark\models\forms\ConfigForm */
+/* @var $defaultSettings \humhub\modules\bookmark\models\forms\DefaultSettings */
+/* @var $bookmarks \humhub\modules\bookmark\models\Bookmark[] */
+/* @var $currentUserBookmarked boolean */
+/* @var $bookmarkUrl string */
+/* @var $unbookmarkUrl string */
+/* @var $userListUrl string */
+
+BookmarkAsset::register($this);
 
 $color = Html::encode($settings->iconColor);
 
@@ -21,7 +30,6 @@ $unbookmarkText .= '</span>';
 <span class="bookmarkLinkContainer" id="bookmarkLinkContainer_<?= $id ?>">
 
     <?php if (Yii::$app->user->isGuest): ?>
-
         <?= Html::a(Yii::t('BookmarkModule.widgets_views_bookmarkLink', 'Bookmark'), Yii::$app->user->loginUrl, ['data-target' => '#globalModal']); ?>
     <?php else: ?>
 
@@ -42,7 +50,7 @@ $unbookmarkText .= '</span>';
         ]); ?>
     <?php endif; ?>
 
-    <?php if ($settings->seeBookmarkCount) : ?>
+    <?php if ($settings->seeBookmarkCount && !$defaultSettings->private_bookmarking) : ?>
         <?php if (count($bookmarks) > 0) { ?>
             <!-- Create link to show all users, who bookmarked this -->
             <a href="<?php echo $userListUrl; ?>" data-target="#globalModal">

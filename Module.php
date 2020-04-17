@@ -94,16 +94,6 @@ class Module extends ContentContainerModule
     /**
      * @inheritdoc
      */
-    public function getActivityClasses()
-    {
-       return [
-           'humhub\modules\bookmark\activities\Bookmarked'
-       ];
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function getPermissions($contentContainer = null)
     {
         if ($contentContainer instanceof User) {

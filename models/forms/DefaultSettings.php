@@ -12,8 +12,8 @@
 namespace humhub\modules\bookmark\models\forms;
 
 use humhub\components\SettingsManager;
+use humhub\modules\bookmark\notifications\NewBookmark;
 use humhub\modules\content\components\ContentContainerActiveRecord;
-use humhub\modules\content\components\ContentContainerSettingsManager;
 use Yii;
 use yii\base\Model;
 use yii\helpers\Url;
@@ -21,6 +21,7 @@ use yii\helpers\Url;
 class DefaultSettings extends Model
 {
     const SETTING_PINNED_FIRST = 'defaults.pinnedFirst';
+    const SETTING_PRIVATE_BOOKMARKING = 'defaults.privateBookmarking';
 
     /**
      * @var ContentContainerActiveRecord
@@ -31,6 +32,11 @@ class DefaultSettings extends Model
      * @var integer
      */
     public $pinned_first;
+
+    /**
+     * @var integer
+     */
+    public $private_bookmarking;
 
     /**
      * @var SettingsManager
@@ -45,6 +51,7 @@ class DefaultSettings extends Model
     private function initSettings()
     {
         $this->pinned_first = (int) $this->getSetting(self::SETTING_PINNED_FIRST, 0);
+        $this->private_bookmarking = (int) $this->getSetting(self::SETTING_PRIVATE_BOOKMARKING, 0);
     }
 
     /**
@@ -72,7 +79,7 @@ class DefaultSettings extends Model
     public function rules()
     {
         return [
-            [['pinned_first'], 'integer'],
+            [['pinned_first', 'private_bookmarking'], 'integer'],
         ];
     }
 
@@ -83,6 +90,7 @@ class DefaultSettings extends Model
     {
         return [
             'pinned_first' => Yii::t('BookmarkModule.forms', 'Show pinned content first.'),
+            'private_bookmarking' => Yii::t('BookmarkModule.forms', 'Keep bookmarks private and do not send notifications or create social activities.'),
         ];
     }
 
@@ -90,6 +98,11 @@ class DefaultSettings extends Model
     {
         $settings = $this->getSettings();
         $settings->set(self::SETTING_PINNED_FIRST, $this->pinned_first);
+        $settings->set(self::SETTING_PRIVATE_BOOKMARKING, $this->private_bookmarking);
+        if ($this->private_bookmarking) {
+            // remove all existing notifications
+            NewBookmark::instance()->delete();
+        }
         return true;
     }
 
@@ -97,6 +110,7 @@ class DefaultSettings extends Model
     {
         $settings = $this->getSettings();
         $settings->set(self::SETTING_PINNED_FIRST, null);
+        $settings->set(self::SETTING_PRIVATE_BOOKMARKING, null);
         $this->initSettings();
     }
 
@@ -113,5 +127,14 @@ class DefaultSettings extends Model
     public function getSubmitUrl()
     {
         return ($this->isGlobal()) ? Url::to(['/bookmark/config']) : $this->contentContainer->createUrl('/bookmark/container-config');
+    }
+
+    /**
+     * Static initializer
+     * @return \self
+     */
+    public static function instantiate()
+    {
+        return new self;
     }
 }
